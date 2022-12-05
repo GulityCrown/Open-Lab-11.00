@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,22 +12,24 @@ namespace Open_Lab_11._00
     {
         static void Main(string[] args)
         {
-            Book LOTR2 = new Book();
+            Book dejepis = new Book("Dejepis", 356);
+            Book zakladyElektrotechniky = new Book("základy elektrotechniky", 125);
+            Book slovencina = new Book("Slovenčina", 134);
+            Book fyzika = new Book("Fyzika", 124);
+            Library schoolLibrary = new Library();
 
-            /*LOTR.Title = "Lord Of The Rings";
-            LOTR.Author = "J.J.R.Tolkien";
-            LOTR.Category = "epic high-fantasy novel";
-            LOTR.Pages = 1172;
-            LOTR.RelaseDate = "29th July 1954";*/
-            LOTR2.Vypis();
-            Book LOTR3 = new Book("Lord of the Rings 3", 512);
-            LOTR3.Vypis();
-            Book HOBBIT = new Book("Hobbit", 310, "juvenile fantasy", "J.R.R.Tolkien", 1937);
+            schoolLibrary.StudentsList.Add("John");
+            schoolLibrary.StudentsList.Add("Poul");
+            schoolLibrary.BooksList.Add("dejepis");
+            schoolLibrary.BooksList.Add("základy elektrotechniky");
+            schoolLibrary.BooksList.Add("Slovenčina");
+            schoolLibrary.BooksList.Add("fyzika");
+            Console.WriteLine(schoolLibrary.ToString());
+            
 
-            HOBBIT.Category = Book.categoryList[4];
-            HOBBIT.Vypis();
 
-            Console.WriteLine("LOTR3 title is: " + HOBBIT.Pages);
+
+            
         }
     }
 }
