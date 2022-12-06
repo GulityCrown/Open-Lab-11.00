@@ -20,10 +20,13 @@ namespace Open_Lab_11._00
 
             schoolLibrary.StudentsList.Add("John");
             schoolLibrary.StudentsList.Add("Poul");
-            schoolLibrary.BooksList.Add("dejepis");
-            schoolLibrary.BooksList.Add("základy elektrotechniky");
-            schoolLibrary.BooksList.Add("Slovenčina");
-            schoolLibrary.BooksList.Add("fyzika");
+            schoolLibrary.BooksList.Add(dejepis);
+            schoolLibrary.BooksList.Add(zakladyElektrotechniky);
+            schoolLibrary.BooksList.Add(slovencina);
+            schoolLibrary.BooksList.Add(fyzika);
+            schoolLibrary.NumberOfStudents = 2;
+            schoolLibrary.NumberOfBooks = 4;
+            
             Console.WriteLine(schoolLibrary.ToString());
             
 

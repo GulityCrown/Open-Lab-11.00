@@ -17,7 +17,7 @@ namespace Open_Lab_11._00
         private int numberOfBooks;
         private int numberOfStudents;
         private List<string> studentsList = new List<string>();
-        private List<string> booksList = new List<string>();
+        private List<Book> booksList = new List<Book>();
         /// <summary>
         /// getter and setter for studentList
         /// </summary>
@@ -29,7 +29,7 @@ namespace Open_Lab_11._00
         /// <summary>
         /// getter and setter for booksList
         /// </summary>
-        public List<string> BooksList
+        public List<Book> BooksList
         {
             get { return booksList; }
             set { booksList = value; }
@@ -71,9 +71,11 @@ namespace Open_Lab_11._00
         /// </summary>
         public override string ToString()
         {
+            var mylist = booksList.ConvertAll(x => x.ToString());
             return String.Format($"number of students: {numberOfStudents}\nnumber of books: " +
                 $"{numberOfBooks}\n students: " + string.Join(",", studentsList) + "\nbooks: " + string.Join(",", booksList));
-            
+
+
 
         }
     }

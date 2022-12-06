@@ -107,15 +107,10 @@ namespace Open_Lab_11._00
         /// <summary>
         /// method that reads every field
         /// </summary>
-        public void Vypis()
+        public override string ToString()
         {
-            Console.WriteLine();
-            Console.WriteLine("Category: " + category);
-            Console.WriteLine("Author: " + author);
-            Console.WriteLine("Title: " + title);
-            Console.WriteLine("Relase date: " + relaseDate);
-            Console.WriteLine("number of pages: " + pages);
-            Console.WriteLine();
+            return String.Format($"Title: {title}\nAuthor: {author}\ncategory: {category}\nrelase Date: {relaseDate}\npages: {pages}");
+
         }
     }
 }
